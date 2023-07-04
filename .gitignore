@@ -1,3 +1,6 @@
+# Ignore local bin
+bin/*
+
 # Prerequisites
 *.d
 
