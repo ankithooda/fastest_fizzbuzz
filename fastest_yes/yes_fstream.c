@@ -1,17 +1,19 @@
 #include <stdio.h>
+#define BUF_SIZE 8192
 
 int main() {
-    printf("Hello World\n");
-    FILE *stream;
-    int close_err;
+    // FILE *stream;
+    // int close_err;
     
-    stream = fdopen(1, "w");
+    // stream = fdopen(1, "w");
 
-    if (fclose(stream)) {
-        perror("Error in opening STDOUT");
-        return 1;
+    static char buf[BUF_SIZE];
+
+    setvbuf (stdout, buf, _IOFBF, BUF_SIZE);
+
+    while(1) {
+        fwrite("y\n", 2, 1, stdout);
     }
-
     return 0;
     
 }
