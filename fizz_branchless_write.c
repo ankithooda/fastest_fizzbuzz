@@ -9,8 +9,8 @@
 
 
 /*
-We allocate a buffer of length BUFSIZ (8192) + 223.
-BUFSIZ is written to STDOUT, the additional 223 to handle overflow.
+We allocate a buffer of length BUFSIZ (8192) + 208.
+BUFSIZ is written to STDOUT, the additional 208 to handle overflow.
 
 */
 int main() {
@@ -24,8 +24,6 @@ int main() {
     char* template = "%ld\n%ld\nFizz\n%ld\nBuzz\nFizz\n%ld\n%ld\nFizz\nBuzz\n%ld\nFizz\n%ld\n%ld\nFizzBuzz\n";
 
     while (1) {
-
-        fwrite()
 
         byte_count = sprintf(
             buf + buf_count,
