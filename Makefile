@@ -4,7 +4,7 @@ fizz_simple:
 
 fizz_branchless:
 	gcc fizz_branchless.c -o ./bin/fizz_branchless
-	./bin/fizz_branchless | pv > /dev/null
+	./bin/fizz_branchless | pv -a > /dev/null
 
 trace_print_buff:
 	gcc buffer_experiments/print_buff.c	-o ./bin/print_buff
